@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="textures.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Video Background */
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Content Styling */
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+
+        header, main {
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <video id="video-background" autoplay muted loop>
+        <source src="background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold">TravelPlanner</span>
+                <div class="nav-links" style="padding-left: 300px;">
+                    <a href="destination1.html" style="padding-left: 50px">Destinations</a>
+                    <a href="contact.html" style="padding-left: 50px">Contact</a>
+                    <a href="about.html" style="padding-left: 50px">About</a>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-globe text-gray-700"></i>
+                <span class="text-gray-700">INR</span>
+                <button class="bg-black text-white px-4 py-2 rounded">Sign in</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="bg-white">
+        <div class="container mx-auto py-6 px-6">
+            <div class="flex space-x-6 justify-center">
+                <a class="flex items-center text-black font-semibold" href="#">
+                    <i class="fas fa-home mr-2"></i>
+                    Search All
+                </a>
+                <a class="flex items-center text-gray-700 hover:text-black" href="#">
+                    <i class="fas fa-bed mr-2"></i>
+                    Hotels
+                </a>
+                <a class="flex items-center text-gray-700 hover:text-black" href="#">
+                    <i class="fas fa-camera mr-2"></i>
+                    Things to Do
+                </a>
+                <a class="flex items-center text-gray-700 hover:text-black" href="#">
+                    <i class="fas fa-utensils mr-2"></i>
+                    Restaurants
+                </a>
+                <a class="flex items-center text-gray-700 hover:text-black" href="#">
+                    <i class="fas fa-plane mr-2"></i>
+                    Flights
+                </a>
+                <a class="flex items-center text-gray-700 hover:text-black" href="#">
+                    <i class="fas fa-home mr-2"></i>
+                    Holiday Homes
+                </a>
+            </div>
+            <div class="mt-6 flex justify-center">
+                <div class="relative w-full max-w-2xl">
+                    <input class="w-full border border-gray-300 rounded-full py-3 px-4 pl-10 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Places to go, things to do, hotels..." type="text"/>
+                    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+                    <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-green-500 text-white px-6 py-2 rounded-full">Search</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="cont_about">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </footer>
+</body>
+</html>
